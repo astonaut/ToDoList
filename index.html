@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办事项清单</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>待办事项清单</h1>
+            <form id="task-form">
+                <div class="input-group">
+                    <input type="text" id="task-input" placeholder="添加新任务..." autocomplete="off" required>
+                    <button type="submit" id="add-button">添加</button>
+                </div>
+            </form>
+        </header>
+        
+        <div class="task-filters">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="active">未完成</button>
+            <button class="filter-btn" data-filter="completed">已完成</button>
+        </div>
+        
+        <div class="task-list-container">
+            <ul id="task-list">
+                <!-- 任务将通过JavaScript动态添加 -->
+            </ul>
+            
+            <div class="task-stats">
+                <span id="tasks-counter">0 个任务</span>
+                <button id="clear-completed">清除已完成</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
